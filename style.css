@@ -1,0 +1,65 @@
+.container{
+    font-family: Ubuntu, Geneva, Tahoma, sans-serif;
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto 3fr 1fr auto;
+    grid-template-areas:
+    "h h h h h"
+    "m m m m m"
+    "w w w w w"
+    "f f f f f";
+}
+
+.site-header{
+    background-color: cornflowerblue;
+    border: solid 1px;
+    grid-area: h;
+}
+
+.site-main{
+    background-color: greenyellow;
+    border: solid 1px;
+    grid-area: m;
+}
+
+.widget-area{
+    background-color: white;
+    border: solid black 1px;
+    grid-area: w;
+}
+
+.site-footer{
+    background-color: indigo;
+    border: solid black 1px;
+    color: ivory;
+    grid-area: f;
+}
+
+@media (min-width: 1024px){
+.container{
+    grid-template-areas:
+    "h m m m m"
+    "h m m m m"
+    "h w w w w"
+    "h f f f f";
+}
+}
+
+@media only screen and (min-width: 1400px){
+    .container{
+        grid-template-areas:
+        "h m m m w"
+        "h m m m w"
+        "h m m m w"
+        "h f f f w";
+    }
+    }
+
+
+
+
+
+
+
